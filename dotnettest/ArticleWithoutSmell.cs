@@ -1,13 +1,13 @@
 namespace dotnettest
 {
-    public class Article
+    public class ArticleWithoutSmell
     {
         private IArticleState articleState;
 
         public string Name => articleState.Name;
         public string Text => articleState.Text;
 
-        public Article(string name, string text)
+        public ArticleWithoutSmell(string name, string text)
         {
             articleState = new NotReviewedArticleState(name, text);
         }
