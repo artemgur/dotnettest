@@ -25,7 +25,12 @@ namespace dotnettest
 
         public IArticleState Publish()
         {
-            throw new System.NotImplementedException();
+            throw new System.InvalidOperationException();
+        }
+
+        public string GetReviewText()
+        {
+            throw new System.InvalidOperationException();
         }
     }
 }

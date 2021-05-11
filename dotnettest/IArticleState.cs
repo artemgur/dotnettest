@@ -10,5 +10,7 @@ namespace dotnettest
         public void ChangeText(string newText);
 
         public IArticleState Publish();
+
+        public string GetReviewText();
     }
 }

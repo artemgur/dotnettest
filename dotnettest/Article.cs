@@ -2,34 +2,39 @@ namespace dotnettest
 {
     public class Article
     {
-        private IArticleState ArticleState;
+        private IArticleState articleState;
 
-        public string Name => ArticleState.Name;
-        public string Text => ArticleState.Text;
+        public string Name => articleState.Name;
+        public string Text => articleState.Text;
 
         public Article(string name, string text)
         {
-            ArticleState = new NotReviewedArticleState(name, text);
+            articleState = new NotReviewedArticleState(name, text);
         }
         
         public void Review(bool isAccepted, string review)
         {
-            ArticleState = ArticleState.Review(isAccepted, review);
+            articleState = articleState.Review(isAccepted, review);
         }
 
         public void ChangeText(string newText)
         {
-            ArticleState.ChangeText(newText);
+            articleState.ChangeText(newText);
         }
 
         public void Publish()
         {
-            ArticleState = ArticleState.Publish();
+            articleState = articleState.Publish();
         }
 
         public string GetState()
         {
-            return ArticleState.GetType().ToString();
+            return articleState.GetType().ToString();
+        }
+
+        public string GetReviewText()
+        {
+            return articleState.GetReviewText();
         }
     }
 }

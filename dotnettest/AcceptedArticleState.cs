@@ -15,17 +15,22 @@ namespace dotnettest
         
         public IArticleState Review(bool isAccepted, string review)
         {
-            throw new System.NotImplementedException();
+            throw new System.InvalidOperationException();
         }
 
         public void ChangeText(string newText)
         {
-            throw new System.NotImplementedException();
+            throw new System.InvalidOperationException();
         }
 
         public IArticleState Publish()
         {
             return new PublishedArticleState(Name, Text);
+        }
+
+        public string GetReviewText()
+        {
+            return ReviewerComment;
         }
     }
 }
