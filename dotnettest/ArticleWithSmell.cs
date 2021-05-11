@@ -12,7 +12,7 @@ namespace dotnettest
         public bool IsAccepted { get; private set; }
         public bool IsPublished { get; private set; }
 
-        public Article(string name, string text)
+        public ArticleWithSmell(string name, string text)
         {
             Name = name;
             Text = text;
