@@ -2,7 +2,7 @@ using System;
 
 namespace dotnettest
 {
-    public class Article
+    public class ArticleWithSmell
     {
         public string Name { get; private set; }
         public string Text { get; private set; }
